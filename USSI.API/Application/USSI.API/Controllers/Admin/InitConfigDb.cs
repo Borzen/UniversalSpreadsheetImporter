@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using USSI.API.Client.Interfaces.Controllers.Admin;
 using USSI.API.Core.DataServices.Interfaces.BaseInterfaces;
 
 namespace USSI.API.Controllers.Admin
@@ -7,15 +8,15 @@ namespace USSI.API.Controllers.Admin
     [Route("admin/db/init")]
     public class InitConfigDb : ControllerBase
     {
-        private IDBMigrationRunner _runner;
-        public InitConfigDb(IDBMigrationRunner runner)
+        private IDbInit _dbInit;
+        public InitConfigDb(IDbInit dbInit)
         {
-            _runner = runner;
+            _dbInit = dbInit;
         }
         [HttpPost]
         public IActionResult Post()
         {
-            _runner.RunInit();
+            _dbInit.InitDb();
             return Ok();
         }
     }

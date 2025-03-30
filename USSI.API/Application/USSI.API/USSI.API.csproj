@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Data Access\USSI.API.DataAccess.SQLite\USSI.API.DataAccess.SQLite.csproj" />
+    <ProjectReference Include="..\..\Middleware\USSI.API.Client\USSI.API.Client.csproj" />
   </ItemGroup>
 
   <ItemGroup>

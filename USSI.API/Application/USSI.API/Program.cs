@@ -1,5 +1,4 @@
 using USSI.API.IoC;
-using USSI.Global.Config.Models;
 
 internal class Program
 {

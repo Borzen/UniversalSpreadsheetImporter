@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="InitDb\SQLFiles\CreateTemplateColumnTable.sql" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="USSI.API.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -29,6 +25,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Middleware\USSI.API.Core.DataServices\USSI.API.Core.DataServices.csproj" />
+    <ProjectReference Include="..\..\Models\USSI.API.Models\USSI.API.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="InitDb\SQLFiles\CreateTemplateColumnTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="InitDb\SQLFiles\CreateTemplateTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
