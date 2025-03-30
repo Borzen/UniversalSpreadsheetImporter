@@ -1,0 +1,6 @@
+{
+  "APIDb": {
+    "DatabaseType": "Sqlite",
+    "ConnectionString": "a"
+  }
+}
