@@ -1,6 +1,7 @@
 {
   "APIDb": {
     "DatabaseType": "Sqlite",
-    "ConnectionString": "a"
+    "ConnectionString": "",
+    "SQLFileLocation": ""
   }
 }

@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Middleware\USSI.API.Client\USSI.API.Client.csproj" />
+    <ProjectReference Include="..\..\Models\USSI.API.Models\USSI.API.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

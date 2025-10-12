@@ -29,7 +29,7 @@ namespace USSI.API.Client.IoC
         {
             switch (contigedSql.ToLower())
             {
-                case "sqllite":
+                case "sqlite":
                 default:
                     return SQLType.SQLite;
             }

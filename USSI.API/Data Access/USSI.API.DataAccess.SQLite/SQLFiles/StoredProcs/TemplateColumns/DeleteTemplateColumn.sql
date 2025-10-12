@@ -1,0 +1,1 @@
+delete from TemplateColumn where TemplateColumnId = @id;

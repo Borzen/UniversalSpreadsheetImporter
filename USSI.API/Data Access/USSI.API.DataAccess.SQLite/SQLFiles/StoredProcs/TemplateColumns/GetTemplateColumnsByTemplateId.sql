@@ -1,0 +1,1 @@
+select * from TemplateColumns where TemplateId = @id;

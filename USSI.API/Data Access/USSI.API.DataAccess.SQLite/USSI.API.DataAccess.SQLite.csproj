@@ -7,34 +7,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="SQLFiles\Init\CreateTemplateColumnTable.sql" />
+    <None Remove="SQLFiles\Init\CreateTemplateTable.sql" />
     <None Remove="USSI.API.db" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="SQLFiles\StoredProcs\TemplateColumns\InsertTemplateColumn.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SQLFiles\Init\CreateTemplateColumnTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLFiles\Init\CreateTemplateTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="USSI.API.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="dbup" Version="5.0.41" />
-    <PackageReference Include="dbup-sqlite" Version="6.0.1" />
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.20" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Middleware\USSI.API.Core.DataServices\USSI.API.Core.DataServices.csproj" />
+    <ProjectReference Include="..\..\Middleware\USSI.API.Core.Repository\USSI.API.Core.Repository.csproj" />
     <ProjectReference Include="..\..\Models\USSI.API.Models\USSI.API.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="InitDb\SQLFiles\CreateTemplateColumnTable.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="InitDb\SQLFiles\CreateTemplateTable.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Folder Include="DataServices\" />
   </ItemGroup>
 
 </Project>
